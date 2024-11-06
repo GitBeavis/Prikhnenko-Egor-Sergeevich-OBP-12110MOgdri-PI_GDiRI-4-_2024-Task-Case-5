@@ -9,7 +9,7 @@ def main():
     ]
 
     for i, student in enumerate(students, 1):
-        print(f'Информация о студенте {i}:\n{student}\n')
+        print(f'Информация о студенте {i}:\n{student})
 
 
 if __name__ == "__main__":
