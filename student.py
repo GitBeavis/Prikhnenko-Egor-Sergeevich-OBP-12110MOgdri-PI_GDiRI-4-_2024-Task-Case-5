@@ -68,6 +68,18 @@ class Student:
     def get_debt_count(self) -> int:
         return self.debt_count
 
+
+    # Вычисление среднего балла по всем предметам
+    def evaluate_average_grade(self, semester_grades: dict[str, int]) -> None:
+        avg = 0
+        if not semester_grades:
+            return 
+        for _, grade in semester_grades.items():
+            avg += grade
+        avg /= len(semester_grades)
+        self.average_grade = round(avg, 2)
+
+
     # Метод для оценки успеваемости студента на основе среднего балла
     def evaluate_performance(self) -> str:
         if self.average_grade > 8:
